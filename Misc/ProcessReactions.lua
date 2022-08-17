@@ -9,31 +9,51 @@ end
 
 function Reactions:WhoFarted()
 
-    local message = self.fart.message
-    local results = self.fart.results
+    local message = self.fart
     local reactions_cache = message.reactions -- iterable cache of reactions to this message
 
     coroutine.wrap(function()
+
+        local results = {}
         for emoji, v in pairs(reactions_cache) do
 
-            results[emoji] = results[emoji] or { count = 0 }
+            local total = v.count
+            if (total > 1) then
 
-            -- iterable cache of users who have reacted with this emoji:
-            local users = v:getUsers()
+                results[#results + 1] = { emoji = emoji, total = v.count - 1 } -- exclude bot reaction
 
-            for _, member in pairs(users) do
-                if (not member.bot) then
-                    -- For every member that used this reaction, add one to count:
-                    results[emoji].count = results[emoji].count + 1
+                for j = 1, #self.members do
+                    local t = self.members[j]
+                    if (t.emoji == emoji) then
+                        results[#results].member = t.member
+                    end
                 end
             end
         end
 
         results = self:SortReactions(results)
+        results = results[1]
+        local channel = self.random_fart_channel
+        local embed = self.the_tribe_has_spoken
+        if (results) then
 
-        for k, v in pairs(results) do
-            print(v.offender.name)
-            print(k, v.count, v.offender)
+            local role = self.stinky_role
+            local member = results.member
+
+            member:addRole(role)
+            --member:setNickname("John Doe")
+
+            embed.description = embed.description:gsub('$member', member.name)
+            channel:send({ embed = embed })
+
+            self.timer.setTimeout(1000 * 60 * self.stinky_role_duration, function()
+                member:removeRole(role)
+            end)
+        else
+            channel:send({ embed = {
+                title = 'HUH?',
+                description = 'Must have been the wind... 💨'
+            } })
         end
     end)()
 end

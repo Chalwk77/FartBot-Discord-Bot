@@ -74,10 +74,7 @@ function Discord:OnReady()
     self.guild = client:getGuild(self.discord_server_id)
     if (self.guild) then
 
-        self.client = client
-
         client:info('Ready: ' .. client.user.tag .. ' | Bot version: 1.0')
-
         self:LoadCommands()
 
         self.random_fart_channel = self.guild:getChannel(self.random_fart_channel)
@@ -85,10 +82,15 @@ function Discord:OnReady()
         -- @param v = numerical member id (string)
         -- @param k = table index
         for k, v in ipairs(self.members) do
-            self.members[k] = {
-                emoji = self.reaction_emoji[k],
-                member = self.guild:getMember(v) -- member cache
-            }
+
+            local member = self.guild:getMember(v)
+            if (member) then
+                local emoji = self.reaction_emoji[k]
+                self.members[k] = {
+                    member = member, -- member cache
+                    emoji = emoji
+                }
+            end
         end
 
         self:OnTick()
@@ -97,7 +99,6 @@ end
 
 function Discord:StartBot()
     self:LoadDependencies()
-
     client:run('Bot ' .. self.token())
     client:setGame("💨 FRAAAP 💨")
 end
