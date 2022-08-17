@@ -82,7 +82,6 @@ function Discord:OnReady()
         -- @param v = numerical member id (string)
         -- @param k = table index
         for k, v in ipairs(self.members) do
-
             local member = self.guild:getMember(v)
             if (member) then
                 local emoji = self.reaction_emoji[k]

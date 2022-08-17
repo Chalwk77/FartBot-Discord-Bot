@@ -28,7 +28,7 @@ return {
     -- Paste your Discord server numerical ID (NOT NAME):
     -- 1). Right click the Discord server icon and click "Copy ID".
     -- 2). Replace "xxxxxxxxxxxxxxxxxx" below with the id you copied.
-    discord_server_id = 'xxxxxxxxxxxxxxxxxx',
+    discord_server_id = '508458848559038465',
 
     -- Commands files:
     -- Set to false to disable command.
@@ -58,12 +58,12 @@ return {
 
     -- Numerical channel id where fart messages will appear:
     --
-    random_fart_channel = 'xxxxxxxxxxxxxxxxxx',
+    random_fart_channel = '1008843928235151420',
 
 
     -- Numerical id of the custom role to be given:
     --
-    stinky_role = 'xxxxxxxxxxxxxxxxxx',
+    stinky_role = '1008968988228866049',
 
 
     -- Time (in minutes) that someone will have the "stinky" role:
@@ -79,7 +79,28 @@ return {
     -- List of member participant numerical ids:
     --
     members = {
-        'xxxxxxxxxxxxxxxxxx', -- name
+        --'261746438512443392', -- 8953draculA
+        '71815575856226304', -- Azaron
+        --'681519206675513380', -- BlueStar
+        '427530181092048897', -- Chalwk
+        --'359074672697933835', -- chicanery
+        --'120272014647754752', -- dariusofwest
+        --'880688167408246815', -- EamonCavaney
+        --'296803809596932096', -- Ein
+        --'556830182975995944', -- Goldeneye
+        '684490463016779827', -- Hitman
+        --'809961773431652413', -- kay
+        --'649086093140164627', -- Kitty_Murder_Mittens
+        --'602404004743479307', -- Na$ty_$uicide
+        --'424726217762275328', -- o0starmazing0o
+        --'669164915084361729', -- Rose
+        --'676113748708294659', -- sandra~
+        --'219994062743142403', -- soskyhi
+        --'983091653260738571', -- UssyGussy
+        '226823765240053760', -- §hôö
+        --'376085453285228544', -- §ïÐëWä®ÐW40
+        --'303215854307246080', -- Đöťś
+        '302593413658705922', -- EldarSquirl
     },
 
 
@@ -87,9 +108,7 @@ return {
     --
     who_farted_embed = {
         title = "💨 FRAAAP 💨",
-        image = {
-            url = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d87b0f4-ae26-4b18-835c-af3a7ce1349f/dcaryjn-0fe92d98-ee39-4592-9c58-efa86f683f9e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkODdiMGY0LWFlMjYtNGIxOC04MzVjLWFmM2E3Y2UxMzQ5ZlwvZGNhcnlqbi0wZmU5MmQ5OC1lZTM5LTQ1OTItOWM1OC1lZmE4NmY2ODNmOWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2hGAukF0Misytk3k-Yw09ZUQ-aKxGFy_JfpKGNKmbio'
-        },
+        color = 0xc27c0e, -- dark gold
         fields = {
             {
                 name = "💩 Poo! 💩",
@@ -102,12 +121,24 @@ return {
                 inline = false
             },
         },
+        image = {
+            url = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d87b0f4-ae26-4b18-835c-af3a7ce1349f/dcaryjn-0fe92d98-ee39-4592-9c58-efa86f683f9e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkODdiMGY0LWFlMjYtNGIxOC04MzVjLWFmM2E3Y2UxMzQ5ZlwvZGNhcnlqbi0wZmU5MmQ5OC1lZTM5LTQ1OTItOWM1OC1lZmE4NmY2ODNmOWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2hGAukF0Misytk3k-Yw09ZUQ-aKxGFy_JfpKGNKmbio'
+        },
         footer = {
             text = "REACT TO SHAME SOMEONE"
-        },
-        color = 0x000000 -- hex color code
+        }
     },
 
+
+    -- EDITED version of "who_farted_embed" (appears after reactions are calculated):
+    --
+    edited_who_farted_embed = {
+        color = 0xc27c0e, -- dark gold
+        title = "💨 FRAAAP 💨",
+        image = {
+            url = 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4d87b0f4-ae26-4b18-835c-af3a7ce1349f/dcaryjn-0fe92d98-ee39-4592-9c58-efa86f683f9e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkODdiMGY0LWFlMjYtNGIxOC04MzVjLWFmM2E3Y2UxMzQ5ZlwvZGNhcnlqbi0wZmU5MmQ5OC1lZTM5LTQ1OTItOWM1OC1lZmE4NmY2ODNmOWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2hGAukF0Misytk3k-Yw09ZUQ-aKxGFy_JfpKGNKmbio'
+        }
+    },
 
     -- Embed message that appears when using /fart command:
     --

@@ -37,14 +37,18 @@ function Reactions:WhoFarted()
         local embed = self.the_tribe_has_spoken
         if (results) then
 
+            message:setEmbed(self.edited_who_farted_embed)
+
             local role = self.stinky_role
             local member = results.member
 
             member:addRole(role)
-            --member:setNickname("John Doe")
+            --member:setNickname(self.smelly_nickname .. ' ' .. member.name) -- todo: figure out why this isn't working.
 
             embed.description = embed.description:gsub('$member', member.name)
             channel:send({ embed = embed })
+
+            message:clearReactions()
 
             self.timer.setTimeout(1000 * 60 * self.stinky_role_duration, function()
                 member:removeRole(role)

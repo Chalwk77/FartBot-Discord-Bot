@@ -6,8 +6,7 @@ function Fart:Toot()
     local des = ''
     for _, v in ipairs(self.members) do
         if (v.member) then
-            v.real_nickname = v.member.nickname
-            v.tmp_nickname = 'Stinky ' .. v.member.name
+            --v.real_nickname = v.member.nickname
             des = des .. v.member.name .. ': ' .. v.emoji .. '\n'
         end
     end
