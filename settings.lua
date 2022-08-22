@@ -28,7 +28,7 @@ return {
     -- Paste your Discord server numerical ID (NOT NAME):
     -- 1). Right click the Discord server icon and click "Copy ID".
     -- 2). Replace "xxxxxxxxxxxxxxxxxx" below with the id you copied.
-    discord_server_id = '508458848559038465',
+    discord_server_id = 'xxxxxxxxxxxxxxxxxx',
 
     -- Commands files:
     -- Set to false to disable command.
@@ -47,23 +47,25 @@ return {
 
 
     -- A random fart will occur randomly between the min/max seconds:
+    -- Default values: 3600, 86400
     --
     random_fart = { 3600, 86400 },
 
 
     -- Time to react (in seconds):
+    -- Default time: 30
     --
-    time_to_vote = 3,
+    time_to_vote = 30,
 
 
     -- Numerical channel id where fart messages will appear:
     --
-    random_fart_channel = '1008843928235151420',
+    random_fart_channel = 'xxxxxxxxxxxxxxxxxx',
 
 
     -- Numerical id of the custom role to be given:
     --
-    stinky_role = '1008968988228866049',
+    stinky_role = 'xxxxxxxxxxxxxxxxxx',
 
 
     -- Time (in minutes) that someone will have the "stinky" role:
@@ -79,30 +81,9 @@ return {
     -- List of member participant numerical ids:
     --
     members = {
-        --'261746438512443392', -- 8953draculA
-        '71815575856226304', -- Azaron
-        --'681519206675513380', -- BlueStar
-        '427530181092048897', -- Chalwk
-        --'359074672697933835', -- chicanery
-        --'120272014647754752', -- dariusofwest
-        --'880688167408246815', -- EamonCavaney
-        --'296803809596932096', -- Ein
-        --'556830182975995944', -- Goldeneye
-        '684490463016779827', -- Hitman
-        --'809961773431652413', -- kay
-        --'649086093140164627', -- Kitty_Murder_Mittens
-        --'602404004743479307', -- Na$ty_$uicide
-        --'424726217762275328', -- o0starmazing0o
-        --'669164915084361729', -- Rose
-        --'676113748708294659', -- sandra~
-        --'219994062743142403', -- soskyhi
-        --'983091653260738571', -- UssyGussy
-        '226823765240053760', -- §hôö
-        --'376085453285228544', -- §ïÐëWä®ÐW40
-        --'303215854307246080', -- Đöťś
-        '302593413658705922', -- EldarSquirl
+        'xxxxxxxxxxxxxxxxxx',
+        -- repeat the structure to add more entries
     },
-
 
     -- Embed message that appears automatically:
     --
@@ -157,7 +138,6 @@ return {
         title = '🗳️ THE TRIBE HAS SPOKEN 🗳️',
         description = '$member has been blamed for farting! He/She gets a smelly role and title.'
     },
-
 
 
     -- Table of reaction emoji's:

@@ -13,11 +13,10 @@ function Fart:Toot()
 
     local channel = self.random_fart_channel
     local embed = self.who_farted_embed
+    embed.fields[2].value = embed.fields[2].value:gsub('$list', des)
 
     -- create embed:
-    embed.fields[2].value = embed.fields[2].value:gsub('$list', des)
     local msg_object = channel:send({ embed = embed })
-
     if (msg_object) then
 
         -- add reactions:

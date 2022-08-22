@@ -33,8 +33,10 @@ function Reactions:WhoFarted()
 
         results = self:SortReactions(results)
         results = results[1]
+
         local channel = self.random_fart_channel
         local embed = self.the_tribe_has_spoken
+
         if (results) then
 
             message:setEmbed(self.edited_who_farted_embed)
