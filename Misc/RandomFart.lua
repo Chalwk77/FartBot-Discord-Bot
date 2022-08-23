@@ -16,7 +16,7 @@ function Fart:Toot()
     embed.fields[2].value = embed.fields[2].value:gsub('$list', des)
 
     -- create embed:
-    local msg_object = channel:send({ embed = embed }) --todo: Figure out why Discordia insists on this being wrapping in coroutine?
+    local msg_object = channel:send({ embed = embed })
     if (msg_object) then
 
         -- add reactions:
