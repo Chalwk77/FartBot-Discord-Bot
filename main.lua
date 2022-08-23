@@ -44,6 +44,7 @@ setmetatable(Discord, {
     __index = client
 })
 
+
 function Discord:LoadDependencies()
     local s = self
     for path, t in pairs(self.dependencies) do
@@ -79,8 +80,6 @@ function Discord:OnReady()
 
         self.random_fart_channel = self.guild:getChannel(self.random_fart_channel)
 
-        -- @param v = numerical member id (string)
-        -- @param k = table index
         for k, v in ipairs(self.members) do
             local member = self.guild:getMember(v)
             if (member) then

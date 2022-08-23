@@ -69,6 +69,7 @@ return {
 
 
     -- Time (in minutes) that someone will have the "stinky" role:
+    -- Default: 30
     --
     stinky_role_duration = 30,
 
@@ -82,8 +83,8 @@ return {
     --
     members = {
         'xxxxxxxxxxxxxxxxxx',
-        -- repeat the structure to add more entries
     },
+
 
     -- Embed message that appears automatically:
     --
